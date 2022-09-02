@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+
+  postgres:
+    image: postgres:14.5
+    container_name: "local_postgres"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "password"
+    volumes:
+      - ./local/postgres/tmp/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - back-tier
+
+  # rails api
+  api:
+    container_name: "local_rails_api"
+    build: ./
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    networks:
+      - back-tier
+
+networks:
+  back-tier:
