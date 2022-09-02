@@ -13,6 +13,8 @@ COPY entrypoint.sh /usr/bin/
 
 # Install dependencies.(RUN = exec when docker image is created from dockerfile.)
 RUN apt update -qq && apt install -y postgresql-client build-essential libpq-dev vim git\
+    && gem update --system \
+    && bundle update --bundler \
     && bundle install \
     && chmod +x /usr/bin/entrypoint.sh
 

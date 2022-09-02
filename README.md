@@ -37,17 +37,22 @@ pre-commit install
 
 ## setup development environment
 
-### build docker container & create rails application
+### create rails application
 
 ```
 docker-compose run --rm --no-deps api rails new . --force --database=postgresql --api
 ```
 
-### create database
+### build docker container
 
 ```
 cp -p local/rails/database.yml.org config/database.yml
 docker-compose up -d --build
+```
+
+### create database
+
+```
 docker exec local_rails_api rake db:create
 ```
 
