@@ -62,6 +62,10 @@ docker exec local_rails_api rake db:create
 
 access <http://localhost:3000/>
 
+<div align="center">
+  <img src="./rails.png">
+</div>
+
 ### db migrate & insert data
 
 ```
