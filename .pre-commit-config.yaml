@@ -21,8 +21,8 @@ repos:
   rev: v0.11.0
   hooks:
     - id: markdownlint
-      # ignore line length of makrdownlint
-      args: [-r, ~MD013]
+      # ignore rules
+      args: [-s, .markdownlint.rb]
 
 # ------------------------------------------------
 # ckeck ruby files
