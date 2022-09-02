@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [docker-rails7](#docker-rails7)
+  - [version](#version)
+  - [setup pre-commit](#setup-pre-commit)
+  - [setup development environment](#setup-development-environment)
+    - [build docker container & create rails application](#build-docker-container--create-rails-application)
+    - [create database](#create-database)
+    - [access rails application](#access-rails-application)
+    - [db migrate & insert data](#db-migrate--insert-data)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # docker-rails7
 
 ruby on rais7 api mode on docker.
