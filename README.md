@@ -1,6 +1,6 @@
 # docker-rails7
 
-ruby on rais7 api mode on docker.
+ruby on rais7 on docker.
 
 ## version
 
